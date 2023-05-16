@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class WageCalcu
 {
@@ -40,6 +41,27 @@ public class Main {
         }else{
             System.out.println("Employee is Absent ");
         }
+
+
+
+        Scanner input = new Scanner( System.in);
+        WageCalcu employee = new WageCalcu();
+
+        System.out.print( "Enter Employee %s name: " );
+        String name = input.nextLine();
+        employee.setEmployeeName( name );
+
+        System.out.print( "Enter how many hours worked: " );
+        int hours = input.nextInt();
+
+        System.out.print( "Enter hourly rate: " );
+        double rate = input.nextInt();
+
+        employee.calculatePay( hours, rate );
+        employee.displayEmployee();
+
+        System.out.println();
+
 
 
     }
